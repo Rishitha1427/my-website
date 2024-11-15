@@ -1,3 +1,6 @@
+<?php
+    include('../includes/connection.php');  // Include your connection file
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -196,6 +199,37 @@
             text-decoration: none;
         }
 
+        /* Card Styling */
+        .card {
+            border: none;
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+        }
+
+        .card img {
+            border-radius: 10px;
+            object-fit: cover;
+            height: 200px;
+        }
+
+        .card-body {
+            padding: 15px;
+            background-color: #333;
+            color: white;
+            border-radius: 0 0 10px 10px;
+        }
+
+        .card-text {
+            font-size: 1.1em;
+            text-align: center;
+        }
+
         /* Mobile Responsiveness */
         @media (max-width: 768px) {
             #hero h1 {
@@ -222,8 +256,15 @@
                 padding: 10px 25px;
                 font-size: 1em;
             }
-        }
 
+            .carousel-caption h1 {
+                font-size: 2.5em;
+            }
+
+            .carousel-caption .date {
+                font-size: 1.5em;
+            }
+        }
     </style>
 </head>
 <body>
@@ -283,18 +324,113 @@
         </button>
     </div>
 
-    <!-- Our Story Section -->
-    <section id="story">
-        <div class="container bg-dark">
-            <h2>Our Story</h2>
-            <p>We met on a warm summer evening and fell in love instantly...</p>
-            <p>Here's a timeline of our journey:</p>
-            <ul>
-                <li>2018: We met in New York</li>
-                <li>2020: Our first vacation together</li>
-                <li>2022: The proposal in Paris</li>
-            </ul>
+     <!-- Our Story Section -->
+<section id="story" class="bg-dark text-white py-5">
+    <div class="container">
+        <h2 class="text-center mb-4">Our Story</h2>
+        <p class="text-center mb-4">We met on a warm summer evening and fell in love instantly...</p>
+        <p class="text-center mb-4">Here's a timeline of our journey:</p>
+        <ul class="text-center mb-4">
+            <li>2018: We met in New York</li>
+            <li>2020: Our first vacation together</li>
+            <li>2022: The proposal in Paris</li>
+        </ul>
+        
+        <!-- Cards Row -->
+        <div class="row row-cols-1 row-cols-md-3 g-4">
+            <!-- Card 1 -->
+            <div class="col">
+                <div class="card bg-dark text-white">
+                    <img src="./images/roshe 1.jpeg" class="card-img-top" alt="Celebrating Kasuni's 26th birthday">
+                    <div class="card-body">
+                        <p class="card-text">Celebrating Kasuni's 26th birthday</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Card 2 -->
+            <div class="col">
+                <div class="card bg-dark text-white">
+                    <img src="./images/roshe 2.jpeg" class="card-img-top" alt="Our first dating moment">
+                    <div class="card-body">
+                        <p class="card-text">Our first dating moment</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Card 3 -->
+            <div class="col">
+                <div class="card bg-dark text-white">
+                    <img src="./images/roshe 3.jpeg" class="card-img-top" alt="Our first day out">
+                    <div class="card-body">
+                        <p class="card-text">Our first day out</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Card 4 -->
+            <div class="col">
+                <div class="card bg-dark text-white">
+                    <img src="./images/roshe 4.jpeg" class="card-img-top" alt="Our second day out">
+                    <div class="card-body">
+                        <p class="card-text">Our second day out</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Card 5 -->
+            <div class="col">
+                <div class="card bg-dark text-white">
+                    <img src="./images/roshe 5.jpeg" class="card-img-top" alt="Our first shopping experience">
+                    <div class="card-body">
+                        <p class="card-text">Our first shopping experience</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Card 6 -->
+            <div class="col">
+                <div class="card bg-dark text-white">
+                    <img src="./images/roshe 6.jpeg" class="card-img-top" alt="Celebrating another day together">
+                    <div class="card-body">
+                        <p class="card-text">Our special day together</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Card 7 -->
+            <div class="col">
+                <div class="card bg-dark text-white">
+                    <img src="./images/roshe 7.jpeg" class="card-img-top" alt="Our first religious day out">
+                    <div class="card-body">
+                        <p class="card-text">Our first religious day out</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Card 8 -->
+            <div class="col">
+                <div class="card bg-dark text-white">
+                    <img src="./images/roshe 8.jpeg" class="card-img-top" alt="Another beautiful day together">
+                    <div class="card-body">
+                        <p class="card-text">Another day we spent together</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Card 9 -->
+            <div class="col">
+                <div class="card bg-dark text-white">
+                    <img src="./images/roshe 9.jpeg" class="card-img-top" alt="Our first train experience">
+                    <div class="card-body">
+                        <p class="card-text">Our first train experience</p>
+                    </div>
+                </div>
+            </div>
         </div>
+    </div>
+</section>
+
     </section>
 
     <!-- Wedding Details Section -->
@@ -316,6 +452,7 @@
     </section>
 
     <!-- Contact us Form Section -->
+   
     <section id="rsvp">
         <div class="container">
             <h2>Contact us</h2>
